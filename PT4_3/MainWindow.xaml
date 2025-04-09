@@ -28,26 +28,14 @@
                         <TextBlock Margin="3,0,0,0">Paste</TextBlock>
                     </StackPanel>
                 </Button>
-            </ToolBar>
-        </ToolBarTray>
-
-        <!-- Панель інструментів, розташована праворуч вікна (по вертикалі) -->
-        <ToolBarTray DockPanel.Dock="Right" Orientation="Vertical">
-            <ToolBar>
-                <!-- Кнопка "Cut" з іконкою та підказкою -->
-                <Button Command="Cut" ToolTip="Cut selection to Windows Clipboard.">
-                    <Image Source="component/image/scissors_1440159.png" Width="16" Height="16"/>
-                </Button>
-
-                <!-- Кнопка "Copy" з іконкою та підказкою -->
-                <Button Command="Copy" ToolTip="Copy selection to Windows Clipboard.">
-                    <Image Source="component/image/files_7570795.png" Width="16" Height="16" />
-                </Button>
-
-                <!-- Кнопка "Paste" з іконкою та підказкою -->
-                <Button Command="Paste" ToolTip="Paste from Windows Clipboard.">
-                    <Image Source="component/image/clipboard_3628897.png" Width="16" Height="16" />
-                </Button>
+                <Separator />
+                <Label>Font size:</Label>
+                <ComboBox>
+                    <ComboBoxItem>10</ComboBoxItem>
+                    <ComboBoxItem>12</ComboBoxItem>
+                    <ComboBoxItem>13</ComboBoxItem>
+                    <ComboBoxItem>14</ComboBoxItem>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray>
 
