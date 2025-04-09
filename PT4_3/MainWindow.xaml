@@ -5,35 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PT4_3"
         mc:Ignorable="d"
-        Title="ToolbarSample" Height="200" Width="300">
-    <!-- Прив'язка команд до вікна -->
-    <Window.CommandBindings>
-        <CommandBinding Command="New" CanExecute="CommonCommandBinding_CanExecute" />
-        <CommandBinding Command="Open" CanExecute="CommonCommandBinding_CanExecute"/>
-        <CommandBinding Command="Save" CanExecute="CommonCommandBinding_CanExecute"/>
-    </Window.CommandBindings>
+        Title="ToolbarIconSample" Height="200" Width="300">
 
     <DockPanel>
-        <!-- Панель інструментів, розташована вгорі вікна -->
-        <ToolBarTray DockPanel.Dock="Top" HorizontalAlignment="Stretch">
-            <!-- Перша панель інструментів для команд "New", "Open", "Save" -->
-            <ToolBar FontFamily="Courier New" FontSize="15" BorderThickness="0">
-                <!-- Кнопка для створення нового -->
-                <Button Command="New" Content="New" />
-                <!-- Кнопка для відкриття файлу -->
-                <Button Command="Open" Content="Open" />
-                <!-- Кнопка для збереження файлу -->
-                <Button Command="Save" Content="Save" />
-            </ToolBar>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <!-- Кнопка "Cut" с иконкой -->
+                <Button Command="Cut" ToolTip="Cut selection to Windows Clipboard.">
+                    <Image Source="component/image/scissors_1440159.png" Width="16" Height="16"/>
+                </Button>
 
-            <!-- Друга панель інструментів для команд "Cut", "Copy", "Paste" -->
-            <ToolBar FontFamily="Courier New" FontSize="15" BorderThickness="0">
-                <!-- Кнопка для вирізання -->
-                <Button Command="Cut" Content="Cut" />
-                <!-- Кнопка для копіювання -->
-                <Button Command="Copy" Content="Copy" />
-                <!-- Кнопка для вставки -->
-                <Button Command="Paste" Content="Paste" />
+                <!-- Кнопка "Copy" с иконкой -->
+                <Button Command="Copy" ToolTip="Copy selection to Windows Clipboard.">
+                    <Image Source="component/image/files_7570795.png" Width="16" Height="16"/>
+                </Button>
+
+                <!-- Кнопка "Paste" с иконкой -->
+                <Button Command="Paste" ToolTip="Paste from Windows Clipboard.">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="component/image/clipboard_3628897.png" Width="16" Height="16"/>
+                        <TextBlock Margin="3,0,0,0">Paste</TextBlock>
+                    </StackPanel>
+                </Button>
             </ToolBar>
         </ToolBarTray>
 

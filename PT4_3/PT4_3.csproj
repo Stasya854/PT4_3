@@ -8,4 +8,22 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="component\image\clipboard_3628897.png" />
+    <None Remove="component\image\files_7570795.png" />
+    <None Remove="component\image\scissors_1440159.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="component\image\clipboard_3628897.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="component\image\files_7570795.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="component\image\scissors_1440159.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
